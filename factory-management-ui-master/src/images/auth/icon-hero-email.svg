@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="36px" viewBox="0 0 48 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-email</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="-3.33066907e-14%" y2="3.38788096e-14%" id="linearGradient-1">
+            <stop stop-color="#A551A4" offset="0%"></stop>
+            <stop stop-color="#558BC9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1096,354 L1064,354 C1059.6,354 1056,357.6 1056,362 L1056,382 C1056,386.4 1059.6,390 1064,390 L1096,390 C1100.4,390 1104,386.4 1104,382 L1104,362 C1104,357.6 1100.4,354 1096,354 Z M1099.2,365.6 L1083.4,376.2 C1082.4,376.8 1081.2,377.2 1080,377.2 C1078.8,377.2 1077.6,376.8 1076.6,376.2 L1060.8,365.6 C1060,365 1059.8,363.8 1060.4,362.8 C1061,362 1062.2,361.8 1063.2,362.4 L1079,373 C1079.6,373.4 1080.6,373.4 1081.2,373 L1097,362.4 C1098,361.8 1099.2,362 1099.8,363 C1100.2,363.8 1100,365 1099.2,365.6 Z" id="path-2"></path>
+    </defs>
+    <g id="XL-Device" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Authentication-/-Sign-Up-/-Thank-You" transform="translate(-1056.000000, -354.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="icon-email" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

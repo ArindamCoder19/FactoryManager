@@ -1,0 +1,712 @@
+$add-task-icon:  '/src/images/icon-task-add.svg';
+$task-completed-icon: '/src/images/icon-task-completed.svg';
+$download-icon: '/src/images/icon-download.svg';
+$calendar-icon: '/src/images/icon-task-calendar.svg';
+$task-icon: '/src/images/icon-task-task.svg';
+$timesheet-active-icon: '/src/images/icon-timesheet-active.svg';
+$user-icon: '/src/images/icon-task-user.svg';
+
+/********
+
+Task Summary,
+Task Detail
+
+********/
+
+//Constant classes
+
+.const-dropdownStyle {
+  font-size: 11px;
+  line-height: 15px;
+  height: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+}
+
+.const-dropdown-menuStyle {
+  width: 100%;
+  margin: 0;
+  top: 99%;
+  border-radius: 0;
+  border: 0;
+}
+
+/********************** Task Summary **********************/
+
+.summary {
+  background-color: $color-white;
+  position: relative;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary.search {
+  box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+}
+
+.header-container {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  > label {
+    color: $color-labelGrey;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 0px;
+
+    span {
+      color: #888888;
+      font-size: 14px;
+    }
+  }
+
+  .btn.active,
+  .btn:hover,
+  .btn:focus,
+  .open>.dropdown-toggle.btn-default:focus,
+  .open>.dropdown-toggle.btn-default:hover,
+  .btn-group.open .dropdown-toggle {
+    background-color: $color-white;
+    box-shadow: none;
+  }
+
+  .dropdown {
+    width: 165px;
+    margin-right: 15px;
+  }
+
+  .dropdown-toggle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .dropdown-menu {
+    width: 83%;
+    top: 85%;
+    left: initial;
+    right: 0;
+    min-width: 70px;
+    font-size: 10px;
+    border-radius: 0;
+  }
+
+  .dropdown-menu li+li {
+    border-top: 1px solid $border-grey;
+  }
+
+  .btn {
+    padding: 0 6px;
+    border: 0;
+    box-shadow: none;
+    font-size: 10px;
+    line-height: 22px;
+    width: 100%;
+  }
+
+  .caret {
+    top: 6px;
+    right: 5px;
+    border: 0;
+    border-bottom: 1px solid $color-labelGrey;
+    border-right: 1px solid $color-labelGrey;
+  }
+
+}
+
+//Filter section
+
+.filter-container {
+  // padding: 8px 15px;
+  position: relative;
+  background-color: $color-filterGrey;
+  width: 100%;
+  // z-index: 150;
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+
+  >div+div {
+    border-left: 1px solid #EEEEEE;
+  }
+
+}
+
+// Progress Bar
+
+.progress-container {
+  margin-top: 20px;
+
+  label {
+    opacity: 0.5;
+    color: $color-labelGrey;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+  }
+
+  .progress {
+    height: 8px;
+  }
+
+  .progress-bar{
+    background-color: $progressbar-green;
+    opacity: 0.4;
+  }
+
+}
+
+//New Task
+
+.new-task {
+  // margin-bottom: 20px;
+  padding: 5px 0;
+  margin: 30px 0 0 0;
+
+  > span{
+    color: $color-green;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-left: 25px;
+    cursor: pointer;
+    background-image: url($add-task-icon);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 15px;
+  }
+
+}
+
+
+//React-Bootstrap-Table
+
+.summary {
+
+
+  .short-name {
+    border: 1px solid #979797;
+    background-color: rgba(216,216,216,0);
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .summary-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    height: 100%;
+
+    input {
+      width: 100%;
+      outline: none;
+    }
+
+    .menu-caret:after {
+      content: $verticalDots;
+      display: inline;
+      width: 20px;
+      height: 20px;
+      color: $verticalDots-grey;
+      cursor: pointer;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+
+    .dropdown-menu {
+      top: 100%;
+    }
+  }
+
+  .d-row {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $color-bgGrey;
+    padding: 5px 15px;
+    cursor: pointer;
+    height: 36px;
+  }
+
+  .d-row > div+div {
+    // padding: 0 10px; // not required
+  }
+
+  .d-row > div {
+    line-height: 25px;
+    font-size: 12px;
+  }
+
+  .active {
+    background-color: rgba(0, 146, 91, 0.1);
+  }
+}
+
+.tasks-wrapper {
+  .d-row {
+    height: 36px;
+    padding: 0px 15px;
+
+    .menu-caret {
+      line-height: 36px;
+    }
+  }
+  .d-row > div:nth-child(1) {
+    // width: 5%;
+    width: 25px;
+    height: 20px;
+    color: #AAAAAA;
+  }
+
+  .d-row > div:nth-child(2) {
+    width: 20%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #AAAAAA;
+  }
+
+  .d-row > div:nth-child(3) {
+    width: 46%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444444;
+  }
+
+  .d-row > div:nth-child(4) {
+    width: 12%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #888888;
+    opacity: 0.5;
+  }
+
+  .d-row > div:nth-child(5) {
+    width: 10%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #7F7F7F;
+    opacity: 0.5;
+  }
+
+  .d-row > div:nth-child(6) {
+    text-align: center;
+    color: #979797;
+    font-size: 10px;
+    line-height: 22px;
+    // margin: 0 10px;
+    margin: 5px 10px;
+    vertical-align: middle;
+  }
+
+}
+
+
+
+/********************** Task Detail **********************/
+
+
+.task-detail {
+
+  background-color: #FFFFFF;
+  margin: 15px 15px 15px 0;
+  overflow-y: auto;
+
+  label {
+    opacity: 0.5;
+    color: $color-labelGrey;
+    font-size: 11px;
+    font-weight: $font-weight;
+    line-height: 15px;
+  }
+
+  .td-desc {
+    margin: 0 0 15px;
+    color: $color-labelGrey;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    // div {
+    //   position: fixed;
+    //   right: 25px;
+    //   z-index: 999;
+    //   font-size: 8px;
+    //   font-weight: 300;
+    //   color: rgb(206, 206, 206);
+    // }
+
+    .loader {
+      position: fixed;
+      right: 2%;
+      top: initial;
+
+      .loader-circle {
+        border: 2px solid #D8D8D8;
+        border-right-color: transparent;
+        border-bottom: 0;
+      }
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+
+      &.dot2 {
+        left: 15px;
+      }
+
+      &.dot3 {
+        left: 30px;
+      }
+      
+    }
+  }
+
+  .td-categories>div {
+    display: inline-block;
+    // width: 50%;
+    // height: 40px;
+
+    label {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+  }
+
+  .td-info {
+    padding: 30px;
+    overflow-y: auto;
+    transition: all 1.5s;
+  }
+
+  .td-info input{
+    outline: none;
+    border: 0;
+  }
+
+  textarea {
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    outline: none;
+    padding: 10.5px;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  .left-border > div+div {
+    border-left: 0.5px solid #eee;
+  }
+
+  .nav-close-trigger {
+
+    z-index: 20;
+    span:before, span:after{
+      background-color: $color-labelGrey;
+    }
+
+  }
+
+  .created-by {
+    // text-align: right;
+    font-size: 12px;
+    font-weight: 100;
+    // opacity: 0.5;
+    text-transform: capitalize;
+  }
+
+}
+
+
+.td-categories {
+
+  .dropdown,
+  .dropdown-toggle{
+    width: 100%;
+    height: 40px;
+  }
+
+  .btn {
+    color: $color-labelGrey;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    padding: 6px 15px;
+  }
+
+  .dropdown-menu>li {
+
+    &:hover {
+      background-color: #f8f8f8;
+    }
+
+    >a {
+      padding: 11px 15px;
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+
+
+  .caret {
+    top: 15px;
+    right: 15px;
+    border: 0;
+    border-bottom: 1px solid $color-labelGrey;
+    border-right: 1px solid $color-labelGrey;
+  }
+
+  .btn {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background: none;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    border-color: $verticalDots-grey;
+    // box-shadow: none;
+  }
+
+  .dropdown-menu>li+li {
+    border-top: 1px solid $border-grey;
+  }
+
+  .dropdown-menu {
+    @extend .const-dropdown-menuStyle;
+  }
+
+}
+
+.td-category {
+  border-right: 1px solid $verticalDots-grey;
+}
+
+.close{
+  position: absolute;
+  right: 0;
+  color: red;
+  z-index: 1000;
+}
+
+.react-datepicker__input-container {
+  display: block;
+}
+
+.logo-complete {
+  background-image: url($task-completed-icon);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 15px;
+}
+
+.comment-section {
+  position: relative;
+
+  button {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    padding: 5px;
+    color: #28AFB0;
+    font-size: 12px;
+  }
+}
+
+
+.download-logo {
+  background-image: url($download-icon);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: 15px;
+  width: 70px;
+  height: 20px;
+  font-size: 10px;
+  padding-left: 20px;
+  line-height: 22px;
+}
+
+
+.old-comments {
+
+  > div {
+    // text-align: right;
+    // padding: 10px;
+    margin: 0 0 15px;
+
+    > div {
+      font-size: 12px;
+    }
+
+    span {
+      font-size: 10px;
+      color: #cecece;
+    }
+
+  }
+}
+
+.error-popup {
+  text-transform: capitalize;
+  color: red;
+}
+
+// start: override vendor-prefixes.less
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+  -webkit-shadow: none;
+}
+.input-rfc[type="text"]:disabled {
+  font-style: italic;
+  color: #444444;
+  opacity: 0.5;
+  background-color: inherit;
+}
+
+
+// .search-container {
+  // padding: 0px;
+  //
+  // .Select-control, .Select-control:hover, , .Select-control:focus{
+  //   border: 0px;
+  //   outline: none;
+  //   box-shadow: none;
+  //
+  //   .Select-arrow {
+  //     display: none;
+  //   }
+  // }
+// }
+.generic-search {
+  z-index: 180;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.newtask-container > div{
+  cursor: default !important;
+}
+
+.mandate::before{
+  content: '*'
+}
+.mandate {
+  color: red !important;
+  opacity: 1 !important;
+}
+
+.task-dd {
+  .dropdown-menu {
+    li > a {
+      text-transform: capitalize;
+    }
+  }
+  .dropdown-submenu {
+    cursor: default;
+  }
+}
+
+
+.dropdown-submenu {
+
+  .react-datepicker {
+    border: 0px;
+    box-shadow: none;
+  }
+
+  .react-datepicker__header {
+    background-color: #FCFCFC;
+    background-color: #FFFFFF;
+    border-radius: 0;
+  }
+
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    width: 10%;
+  }
+
+  .cal-button-container {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    color: #28AFB0;
+  }
+
+}
+
+.td-icon-calendar {
+  padding-left: 25px;
+  background: url($calendar-icon) left center no-repeat;
+}
+
+.td-icon-task {
+  padding-left: 25px;
+  background: url($task-icon) left center no-repeat;
+}
+
+.td-icon-time {
+  padding-left: 25px;
+  background: url($timesheet-active-icon) left center no-repeat;
+}
+
+.icon-user {
+  padding-left: 25px;
+  background: url($user-icon) left center no-repeat;
+}
+
+.td-icon-user {
+
+  .Select-control {
+    padding-left: 25px;
+    background: url($user-icon) 8px center no-repeat;
+  }
+
+  .Select-value {
+    padding-left: 30px !important;
+  }
+
+  .Select-placeholder {
+    padding-left: 30px !important;
+  }
+}
+
+
+
+.icon-calendar {
+  display: inline-block;
+  background: url($calendar-icon) 95% center no-repeat;
+}

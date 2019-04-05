@@ -1,0 +1,855 @@
+/********
+
+Backdrop,
+Downward Caret,
+Task and User Wrappers,
+Generic dropdown styles
+Loader
+profile
+Modal
+********/
+
+/****************** Backdrop ******************/
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(0,0,0,0.2);;
+}
+
+
+/****************** Downward Caret ******************/
+
+.dropdown .caret {
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  opacity: 0.8;
+}
+
+
+/******************
+  Generic Dropdown Styles : Color: Navy, Yellow, Blue, Orange
+
+  ******************/
+
+.navy-dropdown,
+.yellow-dropdown,
+.blue-dropdown,
+.orange-dropdown,
+.grey-dropdown{
+
+  display: inline-block;
+  width: 50%;
+  height: 40px;
+
+  .dropdown.open{
+    box-shadow: none;
+  }
+
+  .dropdown-menu li {
+    position: relative;
+  }
+
+  .dropdown-menu li input{
+    margin: 11px 15px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .dropdown,
+  .dropdown-toggle{
+    width: 100%;
+    height: 100%;
+  }
+
+  .dropdown-menu  {
+    min-width: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 0px;
+    z-index: 100;
+    @extend .const-dropdown-menuStyle;
+  }
+
+  .caret {
+    top: 15px;
+    right: 15px;
+    border: 0;
+  }
+
+  .btn{
+    padding: 6px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu>li>a {
+    padding: 11px 20px;
+    font-size: 12px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+  }
+
+  .dropdown-menu>li>a:first-letter {
+    text-transform: uppercase;
+  }
+
+  .caret {
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+  }
+
+  .btn-noedit {
+    pointer-events: none;
+  }
+
+}
+
+.grey-dropdown.task-dd {
+  width: 33.3%;
+}
+
+.grey-dropdown{
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background-color: $ddfilter-grey;
+    color: $color-labelGrey;
+    box-shadow: none;
+    @extend .const-dropdownStyle;
+  }
+
+  .dropdown-menu  {
+    // z-index: 0;
+    background-color: $ddfilter-grey;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1);
+  }
+
+  .dropdown-menu li>a,
+  .dropdown-submenu li>a{
+    color: $color-labelGrey;
+  }
+
+  .caret {
+    border-bottom: 1px solid $color-labelGrey;
+    border-right: 1px solid $color-labelGrey;
+  }
+
+  .dropdown-submenu {
+    background-color: $color-white;
+    color: $color-labelGrey;
+  }
+
+  .dropdown-menu>li,
+  .dropdown-submenu li {
+    border-top: 1px solid #EEEEEE;
+  }
+
+}
+
+.navy-dropdown{
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background-color: $ddpriority-navy;
+    color: $color-white;
+    box-shadow: none;
+    @extend .const-dropdownStyle;
+  }
+
+  .dropdown-menu  {
+    background-color: $menu-navy;
+  }
+
+  .dropdown-menu>li:hover {
+    background-color: #efeff8;
+  }
+
+  .dropdown-menu>li>a {
+    color: $ddmenu-blue;
+  }
+
+  .dropdown-category {
+    background-color: #F5F5FB;
+
+    li:hover {
+      background-color: #fafafd;
+    }
+
+  }
+
+  .dropdown-menu>li+li {
+    border-top: 1px solid $border-white;
+  }
+
+
+}
+
+.yellow-dropdown {
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background-color: $ddstatus-yellow;
+    box-shadow: none;
+    color: #53599A;
+    @extend .const-dropdownStyle;
+  }
+
+  .dropdown-menu {
+    background-color: $menu-yellow;
+  }
+
+  .caret {
+    border-bottom: 1px solid $color-labelGrey;
+    border-right: 1px solid $color-labelGrey;
+  }
+
+  .dropdown-menu>li:hover {
+    background-color: #fcf8d8;
+  }
+
+  .dropdown-menu>li>a {
+    color: $ddmenu-blue;
+  }
+
+  .dropdown-menu>li+li {
+    border-top: 1px solid $border-white;
+  }
+
+}
+
+.blue-dropdown {
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background-color: $ddwricef-blue;
+    box-shadow: none;
+    color: $color-white;
+    @extend .const-dropdownStyle;
+  }
+
+  .dropdown-menu {
+    background-color: $menu-blue;
+  }
+
+  .dropdown-menu>li:hover {
+    background-color: #f2f9fd;
+  }
+
+  .dropdown-menu>li>a {
+    color: $ddmenu-blue;
+  }
+
+  .dropdown-menu>li+li {
+    border-top: 1px solid $border-white;
+  }
+
+}
+
+.orange-dropdown {
+  .btn,
+  .btn.active,
+  .btn:active,
+  .open>.dropdown-toggle.btn {
+    background-color: $ddcomplex-orange;
+    box-shadow: none;
+    color: $color-white;
+    @extend .const-dropdownStyle;
+  }
+
+  .dropdown-menu {
+    background-color: $menu-orange;
+  }
+
+  .dropdown-menu>li>a {
+    color: $ddmenu-blue;
+  }
+
+  .dropdown-menu>li:hover {
+    background-color: #fef7f7;
+  }
+
+  .dropdown-menu>li+li {
+    border-top: 1px solid $border-white;
+  }
+
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .loader-circle {
+    position: relative;
+    border: 2px solid #FFFFFF;
+    border-right-color: transparent;
+    border-bottom: 0;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    top: 10%;
+    border-radius: 50%;
+    -webkit-animation: circleAnimation 1s cubic-bezier(.42, .61, .58, .41) infinite;
+    animation: circleAnimation 1s cubic-bezier(.42, .61, .58, .41) infinite;
+  }
+
+  @keyframes circleAnimation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+  }
+}
+
+.backdrop {
+  z-index: 1001;
+
+  .loader {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+// start: button
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+// end: button
+
+// start: remove blue border
+a:focus, textarea:focus, input:focus, button:focus {
+  outline: none;
+}
+// end: remove blue border
+
+
+// start: avatar menu
+.search-bar-wrapper .open > .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid #efefef;
+
+    &:first-child {
+      margin-top: 10px;
+    }
+
+    &:last-child {
+      border: 0;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #444;
+      display: block;
+      font-size: 14px;
+      padding: 8px 20px;
+
+      &:hover {
+        background: #f8f8f8;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.showModal {
+  color: #444;
+
+  .modalHeader {
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 100%;
+
+    button {
+      flex-basis: 50px;
+
+      &.nav {
+        text-align: left;
+      }
+
+      &.editSave {
+        color: #28AFB0;
+        text-align: right;
+      }
+    }
+
+    text {
+      flex-basis: 1;
+    }
+  }
+
+  img {
+    border: none;
+    padding: 0;
+  }
+
+  .beCenter{
+    text-align: center;
+  }
+
+  .profileImage {
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    color: #888;
+    padding: 15%;
+    text-transform: uppercase;
+  }
+
+  .profileName {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .modalTitle {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .modalContent {
+    font-size: 14px;
+    padding: 15px 0 0;
+
+    .divider {
+      border-bottom: 1px solid #d8d8d8;
+      display: block;
+      margin: 20px auto;
+      width: 20px;
+    }
+
+    span {
+      display: block;
+    }
+
+    text {
+      display: block;
+      padding: 5px 20px;
+      text-align: center;
+
+      input {
+        text-align: center;
+      }
+
+      &.name {
+        color: #444;
+        font-size: 16px;
+      }
+
+      &.role {
+        text-transform: capitalize;
+      }
+
+      &.localTime {
+        background: #f8f8f8;
+        border-top: 1px solid #eee;
+        font-size: 12px;
+        margin: 15px 0 0;
+        padding: 12px 20px;
+      }
+    }
+  }
+}
+// end: avatar menu
+
+// start: error handling
+.error-container {
+  color: #ff0000;
+  // padding: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  height: 0px;
+  transition: height 0.5s, opacity 1s;
+
+  &.auth-error-show {
+    height: 30px;
+    opacity: 1;
+  }
+
+  &.auth-error-hide {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+/****************** Modal ******************/
+
+.modal {
+  position: absolute;
+  z-index: 160;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.editModalContent, .prevweekModalContent {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 500px;
+  min-height: 300px;
+  background-color: $color-white;
+
+  .modalHeader {
+    position: relative;
+    padding: 20px 30px;
+    border-bottom: 1px solid #D8D8D8;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-close-trigger {
+    display: inline-block;
+    cursor: pointer;
+    right: 15px;
+    span:before, span:after {
+        background: black;
+        height: 1.5px;
+        width: 15px;
+        top: 10px;
+    }
+  }
+
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    max-height: 90%; //for scroll
+
+    .modalAdd {
+      height: 120px;
+      padding: 15px 30px;
+
+      text {
+        cursor: pointer;
+        color: #444444;
+        opacity: 0.5;
+
+      }
+
+      .add-symbol {
+        width: 20px;
+        height: 25px;
+        position: relative;
+        display: inline-flex;
+        vertical-align: middle;
+
+        span:before, span:after {
+          position: absolute;
+          height: 1.5px;
+          content: '';
+          background: #444444;
+          width: 15px;
+          top: 10px;
+          opacity: 0.4;
+        }
+
+        span:before {
+          transform: rotate(0deg);
+        }
+
+        span:after {
+          transform: rotate(-90deg);
+        }
+      }
+
+      > .modalInput {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      .modal-buttons {
+        padding: 5px;
+        display: inline-flex;
+      }
+
+      button {
+        color: #28AFB0;
+        margin: 0 10px;
+      }
+    }
+
+    .modalList {
+      margin-top: 15px;
+      height: 100%;
+      overflow-y: auto;
+
+      ul {
+        padding: 0;
+        margin: 0 30px;
+      }
+
+      li {
+        list-style: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #D8D8D8;
+        position: relative;
+      }
+    }
+  }
+
+}
+
+.prevweekModalContent .modalList {
+  margin: 30px;
+
+  >div {
+
+  }
+}
+
+/*Hide the radio button:*/
+.filter-menu input {
+  display: none;
+}
+
+
+/*Then, style the label so it looks like however you want:*/
+.filter-menu {
+
+  .square-radio-label {
+    width: 12px;
+    height: 12px;
+    border: 1px #444444 solid;
+    display: block;
+    line-height: 22px;
+    text-align: center;
+    color: black;
+    font-size: 40pt;
+    cursor: pointer;
+    background: white;
+    position: absolute;
+    right: 16px;
+    top: 11px;
+  }
+
+  input:checked+.square-radio-label:before {
+    opacity: 1;
+  }
+
+  .square-radio-label:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 8px;
+    width: 8px;
+    background: #444444;
+    content: '';
+    opacity: 0;
+    margin: 1px auto auto 1.3px;
+  }
+
+  .round-radio-label {
+    width: 12px;
+    height: 12px;
+    border: 1px #444444 solid;
+    border-radius: 50px;
+    display: block;
+    line-height: 22px;
+    text-align: center;
+    color: black;
+    font-size: 40pt;
+    cursor: pointer;
+    background: white;
+    position: absolute;
+    right: 16px;
+    top: 11px;
+  }
+
+  input:checked+.round-radio-label:before {
+    opacity: 1;
+  }
+
+  .round-radio-label:before {
+    position: absolute;
+    border-radius: 50px;
+    top: 0px;
+    left: 0px;
+    height: 8px;
+    width: 8px;
+    background: #444444;
+    content: '';
+    opacity: 0;
+    margin: 1px auto auto 1.3px;
+  }
+}
+
+
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+
+  input {
+    display:none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 0px;
+    left: 0px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2A6EBB;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+  background-color: initial;
+}
+
+.dropdown-menu>li:hover {
+  // background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+//React DatePicker
+
+.react-datepicker {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #CCC;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.react-datepicker__tether-element-attached-top .react-datepicker__triangle {
+  border-bottom-color: #FCFCFC;
+}
+
+.react-datepicker,
+.react-datepicker__month-container {
+  font-size: 1rem;
+  width: 100%;
+  // border: 0px;
+}
+
+.react-datepicker__day--outside-month {
+  color: #b7bfc6;
+}
+
+.react-datepicker__day:hover {
+  background-color: rgba(40, 175, 176, 0.1);
+}
+
+.react-datepicker__day--today {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  font-weight: normal;
+}
+
+.react-datepicker__day--selected {
+  background-color: #28AFB0;
+  color: #FFFFFF;
+  border: 0px;
+}
+
+.react-datepicker__current-month {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.react-datepicker__header {
+  background-color: #FCFCFC;
+  border-radius: 0;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+  width: 2.7rem;
+}
+
+.react-datepicker__day-names{
+  margin-top: 5px;
+
+  >div {
+    color: #848f99;
+  }
+}
+
+
+input.td-icon-calendar.calendar-editable {
+  &:focus, &:active {
+    border: 0px;
+    box-shadow: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

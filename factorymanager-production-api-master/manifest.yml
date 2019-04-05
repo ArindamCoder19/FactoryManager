@@ -1,0 +1,26 @@
+# applications:
+# - name: test-factory-management-api
+#   host: test-factory-management-api
+#   memory: 128M
+#   disk_quota: 1024M
+#   command: npm start
+#   domain: mybluemix.net
+#   instances: 1
+
+# applications:
+# - name: dev-factory-management-api
+#   host: dev-factory-management-api
+#   memory: 128M
+#   disk_quota: 1024M
+#   command: npm start
+#   domain: mybluemix.net
+#   instances: 1
+
+applications:
+- name: prod-factory-management-api12012019
+  host: prod-factory-management-api12012019
+  memory: 512M
+  disk_quota: 1024M
+  command: npm start
+  domain: mybluemix.net
+  instances: 1

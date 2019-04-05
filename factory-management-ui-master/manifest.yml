@@ -1,0 +1,34 @@
+### PRODUCTION ###
+
+applications:
+- name: factorymanager12012019
+host: factorymanager12012019
+memory: 256M
+disk_quota: 1024M
+command: npm run start
+domain: mybluemix.net
+instances: 1
+
+
+### TEST ###
+
+# applications:
+# - name: test-factory-management
+# host: test-factory-management
+# memory: 256M
+# disk_quota: 1024M
+# command: npm run start
+# domain: mybluemix.net
+# instances: 1
+
+
+### DEV ###
+
+# applications:
+# - name: dev1-factory-management
+# host: dev1-factory-management
+# memory: 128M
+# disk_quota: 1024M
+# command: npm run start
+# domain: mybluemix.net
+# instances: 1

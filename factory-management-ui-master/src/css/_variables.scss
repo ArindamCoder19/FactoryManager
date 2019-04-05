@@ -1,0 +1,67 @@
+
+$transition:           0.1s;
+$verticalDots:         '\2807';
+
+
+
+
+/****Font****/
+$font-weight:          300;
+$font:                 'Montserrat', sans-serif;
+
+
+/** Mixins **/
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+
+
+/****Color variables****/
+
+$heineken-green:       #00925B;
+$verticalDots-grey:    #D8D8D8;
+$progressbar-green:    #00925B;
+$color-bgGrey:         #EEEEEE;
+$color-labelGrey:      #444444;
+$color-green:          #28AFB0;
+$color-filterGrey:     #F9F9F9;
+$ddpriority-navy:      #53599A;
+$menu-navy:            #EBECF7;
+$ddstatus-yellow:      #F5E663;
+$menu-yellow:          #FAF2B1;
+$ddwricef-blue:        #0893DF;
+$menu-blue:            #E6F4FB;
+$ddcomplex-orange:     #F56363;
+$ddfilter-grey:        #FCFCFC;
+$menu-orange:          #FEEFEF;
+$ddmenu-blue:          #2E3584;
+$header-grey:          #AAAAAA;
+$border-white:         rgba(255,255,255,0.8);
+$border-grey:          rgba(216,216,216,0.15);
+$color-black:          #000000;
+$color-white:          #FFFFFF;
+$color-gray:           #808080;
+$color-red:            #FF0000;
+$color-alto:           #DEDEDE;
+$color-tapestry:       #A551A4;
+$color-danube:         #558BC9;
+$color-silver-chalice: #AAAAAA;
+$color-tundora:        #444444;
+$color-gallery:        #EEEEEE;
+$color-alabaster:      #FCFCFC;
+$color-rosebud:        #F9ADB4;
+$color-sushi:          #8BC34A;
+$color-pelorous:       #3e98c7;
+
+/* Pie chart colors */
+
+$color-pie-intake:     #00BCD4;
+$color-pie-cab:        #2196F3;
+$color-pie-build:      #E91E63;
+$color-pie-test:       #F9A825;
+$color-pie-hold:       #CDDC39;

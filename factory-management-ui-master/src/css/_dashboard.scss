@@ -1,0 +1,287 @@
+.dashboard-wrapper {
+  margin: 20px;
+  padding: 20px;
+  overflow: auto;
+
+  .chart-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .db-header {
+
+    .dropdown-menu li:hover {
+      background-color: #f8f8f8;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .db-switch {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      label {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      label+label {
+        margin-left: 10px;
+      }
+    }
+  }
+
+
+  > div+div {
+    margin-top: 20px;
+  }
+
+
+  .db-progress {
+
+    .progress {
+      height: 35px;
+      margin-bottom: 0;
+      background-color: $color-white;
+      border-radius: 0px;
+      @include box-shadow(none);
+    }
+
+    .progress-bar {
+      white-space: nowrap;
+      color: #828383;
+      line-height: 30px;
+      text-align: left;
+      padding: 0px 1%;
+      border: 2px solid $color-white;
+      background-color: #F8F8F8;
+      @include box-shadow(none);
+    }
+  }
+
+  .db-row {
+
+    >div {
+      height: 250px;
+    }
+
+    .db-tasks,
+    .db-productive,
+    .db-ontime,
+    .db-budget {
+      padding: 20px;
+      height: 100%;
+      background-color: $color-white;
+      @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.1));
+    }
+  }
+
+}
+
+.db-counter {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    padding: 10px;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-white;
+    @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, 0.1));
+
+    >div:first-child {
+      font-size: 2em;
+      display: flex;
+      justify-content: space-around;
+
+      span:nth-child(2) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      span:first-child,
+      span:nth-child(3) {
+        color: $color-rosebud;
+      }
+    }
+
+    >div:nth-child(2) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #888888;
+      font-size: 0.875em;
+    }
+  }
+}
+
+
+.legend { 
+  list-style: none; 
+}
+.legend li { 
+  float: left; 
+  margin-right: 10px; 
+  color: #888888;
+  font-size: 14px; 
+  display: flex;
+  align-items: center; 
+  width: 100px
+}
+.legend span { 
+  float: left; 
+  width: 20px; 
+  height: 4px; 
+  margin: 2px; 
+  border-radius: 100px;
+}
+
+.legend .legend-inTake { background-color: $color-pie-intake; }
+.legend .legend-cab { background-color: $color-pie-cab; }
+.legend .legend-build { background-color: $color-pie-build; }
+.legend .legend-test { background-color: $color-pie-test; }
+.legend .legend-hold { background-color: $color-pie-hold; }
+
+
+/* Circular progress-bar */
+
+.cProgressBar-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  >div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.CircularProgressbar {
+  width: 70%;
+}
+
+.incomplete.CircularProgressbar .CircularProgressbar-path {
+  stroke: $color-pie-build;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.complete.CircularProgressbar .CircularProgressbar-path {
+  stroke: $color-sushi;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #f8f8f8;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+
+  tspan:first-child {
+    fill: $color-labelGrey;
+    font-size: 10px;
+  }
+
+  tspan:nth-child(2) {
+    fill: #888888;
+    font-size: 8px;
+  }
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: none;
+}
+
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: $color-pelorous;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: $color-white;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: $color-white;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
+
+.db-dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+
+  div+div {
+    margin-left: 5%;
+  }
+
+  .caret {
+    right: 4px;
+    transform: rotate(0deg);
+    top: 50%;
+  }
+
+  .btn-default.active,
+  .btn-default:active,
+  .open>.dropdown-toggle.btn-default{
+    text-transform: capitalize;
+    background-color: $color-white;
+    border: 1px solid $color-alto;
+  }
+
+  .btn {
+    padding: 2px 0px 2px 5px;
+    width: 120px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 12px;
+    color: #888888;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .dropdown-menu {
+
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 0px;
+    min-width: 180px;
+    margin: 0px;
+
+    >li {
+      font-size: 12px;
+      padding: 5px 20px 5px 8px;
+    }
+
+    >li>a {
+      padding: 0px;
+      text-transform: capitalize;
+      display: flex;
+      justify-content: space-between;
+      color: #888888;
+
+      >span:nth-child(2) {
+        opacity: 0.5;
+      }
+    }
+    >li+li {
+      border-top: 1px solid $verticalDots-grey;
+    }
+  }
+}

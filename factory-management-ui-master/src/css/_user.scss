@@ -1,0 +1,267 @@
+/********
+
+User List,
+User Details
+
+********/
+
+.no-data {
+  width: 100%;
+  height: 100%;
+  color: $color-labelGrey;
+  opacity: 0.4;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-wrapper, .content-wrapper {
+  position: relative;
+
+}
+
+.user-wrapper .summary {
+
+
+  .short-name {
+    border: 1px solid #979797;
+    background-color: rgba(216,216,216,0);
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #979797;
+    font-size: 8px !important;
+    // line-height: 22px;
+    vertical-align: middle;
+  }
+
+
+  .d-row > div {
+    color: #444444;
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .d-row > div.dropdown {
+    margin: 0;
+  }
+
+  .summary-header {
+    margin-top: 20px;
+
+    .d-row > div:nth-child(1) {
+      width: 25px;
+    }
+
+    .d-row {
+      height: 38px;
+      border: 0px;
+    }
+
+    .d-row > div {
+      color: $header-grey;
+    }
+
+  }
+
+  .d-row > div:nth-child(1) {
+    width: 25px;
+  }
+
+  .d-row > div:nth-child(2) {
+    width: 30%;
+    overflow: hidden;
+    margin-left: 5px;
+  }
+
+  .d-row > div:nth-child(3) {
+    width: 35%;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+
+  .d-row > div:nth-child(4) {
+    width: 25%;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+
+  .d-row > div:nth-child(5) {
+    width: 10%;
+    text-align: right;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+
+  .menu-caret:after {
+    content: $verticalDots;
+    display: inline;
+    color: $verticalDots-grey;
+    cursor: pointer;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  .dropdown {
+    overflow: visible !important;
+    padding: 0;
+  }
+
+  .dropdown .dropdown-menu {
+    top: 100%;
+  }
+
+}
+
+
+
+
+/****************** User Detail ******************/
+
+.user-detail {
+  .dropdown-container {
+    height: 40px;
+  }
+
+  .dropdown-toggle{
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .nav-close-trigger {
+    position: absolute;
+    right: 15px;
+    z-index: 20;
+    span:before, span:after{
+      background-color: $color-labelGrey;
+    }
+  }
+}
+
+.detail-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  padding: 30px;
+
+  .user-date > div+div{
+    border-left: 1px solid #eee;
+  }
+}
+
+.user-img {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #eee;
+  margin: 20px auto;
+  border-radius: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  h5 {
+    line-height: 25px;
+    color: #666666;
+    font-size: 14px;
+  }
+
+  h5:first-child {
+    font-weight: 500;
+    color: #444444;
+  }
+
+  h5:nth-child(2) {
+    font-size: 12px;
+  }
+}
+
+.user-info label {
+  opacity: 0.5;
+  color: $color-labelGrey;
+  font-size: 12px;
+  font-weight: $font-weight;
+  line-height: 15px;
+}
+
+.user-info > div {
+  text-align: center;
+  position: relative;
+}
+
+.dash {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.dash:after {
+  position: absolute;
+  height: 1px;
+  content: '';
+  background: #D8D8D8;
+  width: 50px;
+}
+
+.dropdown-category,
+.dropdown-submenu{
+
+  height: auto;
+  // overflow: auto;
+
+  ul{
+    padding: 0px 0;
+    list-style: none;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  li a {
+    display: block;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 11px 25px;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // text-transform: lowercase;
+
+    &:before {
+      content: '- '
+    }
+  }
+
+}
+
+.dropdown-category {
+  li a {
+    color: #2E3584;
+  }
+  li {
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  }
+}
+
+.user-date {
+  cursor: default;
+
+  input{
+    outline: none;
+    border: 0;
+  }
+
+  .react-datepicker__input-container {
+    width: 120px;
+    margin: 0 auto;
+  }
+}

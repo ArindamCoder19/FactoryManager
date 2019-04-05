@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tasks-/-List-/-Desktop" transform="translate(0.000000, -11.000000)" fill-rule="nonzero" fill="#00925B">
+            <g id="Group-2" transform="translate(0.000000, 11.000000)">
+                <path d="M8,1.18423789e-16 C3.581722,-1.24344979e-15 5.32907052e-16,3.581722 0,8 C-5.32907052e-16,12.418278 3.581722,16 8,16 C12.418278,16 16,12.418278 16,8 C16,3.581722 12.418278,1.18423789e-15 8,0 L8,1.18423789e-16 Z M8,15.1093333 C4.07362362,15.1093333 0.890666667,11.9263764 0.890666667,8 C0.890666667,4.07362362 4.07362362,0.890666667 8,0.890666667 C11.9263764,0.890666667 15.1093333,4.07362362 15.1093333,8 C15.1034592,11.9239406 11.9239406,15.1034592 8,15.1093333 Z" id="Shape"></path>
+                <polygon id="Shape" points="6.88533333 9.38133333 5.17866667 7.67466667 4.42133333 8.42666667 6.88533333 10.8853333 12.0586667 5.712 11.3066667 4.95466667"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

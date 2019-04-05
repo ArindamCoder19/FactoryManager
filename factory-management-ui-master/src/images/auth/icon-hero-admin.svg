@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="37px" viewBox="0 0 48 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-admin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="-3.33066907e-14%" y2="3.38788096e-14%" id="linearGradient-1">
+            <stop stop-color="#A551A4" offset="0%"></stop>
+            <stop stop-color="#558BC9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="XL-Device" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Authentication-/-User-Email-Verified" transform="translate(-1057.000000, -354.000000)">
+            <g id="icon-admin" transform="translate(1057.000000, 354.000000)">
+                <path d="M47.4808421,0 L41.8597895,23.2212357 C41.8597895,26.091762 39.48,28.4173455 36.5475789,28.4173455 L10.9357895,28.4173455 C8.00336842,28.4173455 5.62294737,26.0911442 5.62294737,23.2212357 L0,4.39008098e-15 L14.3709474,11.0014188 L23.7391579,0 L33.1124211,11.0014188 L47.4808421,0 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <rect id="Rectangle-2" fill="url(#linearGradient-1)" x="6" y="32" width="35.3684211" height="5" rx="2.5"></rect>
+                <path d="M47.4808421,0 L41.8597895,23.2212357 C41.8597895,26.091762 39.48,28.4173455 36.5475789,28.4173455 L10.9357895,28.4173455 C8.00336842,28.4173455 5.62294737,26.0911442 5.62294737,23.2212357 L0,4.39008098e-15 L14.3709474,11.0014188 L23.7391579,0 L33.1124211,11.0014188 L47.4808421,0 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M23.892,22.4831121 C22.6282105,22.4831121 21.6,21.4778719 21.6,20.2409382 C21.6,19.0052403 22.6282105,18 23.892,18 C25.1557895,18 26.1833684,19.0052403 26.1833684,20.2409382 C26.1833684,21.4778719 25.1557895,22.4831121 23.892,22.4831121 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M34.292,22.4831121 C33.0282105,22.4831121 32,21.4778719 32,20.2409382 C32,19.0052403 33.0282105,18 34.292,18 C35.5557895,18 36.5833684,19.0052403 36.5833684,20.2409382 C36.5833684,21.4778719 35.5557895,22.4831121 34.292,22.4831121 Z" id="Shape-Copy" fill="#FFFFFF" fill-rule="nonzero" opacity="0.5"></path>
+                <path d="M13.492,22.4831121 C12.2282105,22.4831121 11.2,21.4778719 11.2,20.2409382 C11.2,19.0052403 12.2282105,18 13.492,18 C14.7557895,18 15.7833684,19.0052403 15.7833684,20.2409382 C15.7833684,21.4778719 14.7557895,22.4831121 13.492,22.4831121 Z" id="Shape-Copy-2" fill="#FFFFFF" fill-rule="nonzero" opacity="0.5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

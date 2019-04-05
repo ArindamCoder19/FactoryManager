@@ -1,0 +1,459 @@
+/* Image path */
+
+$welcome-img: '~/src/images/img-welcome-slide-1.jpg';
+$email-img: '~/src/images/auth/email.svg';
+$pwd-img: '~/src/images/auth/password.svg';
+
+
+/***Authentication***/
+
+.form-control {
+  border: 1px solid $color-alto;
+}
+
+.intro {
+  height: 100%;
+  display: flex;
+}
+
+.intro > div{
+  flex: 1;
+  height: 100%;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 5% 0;
+  width: 25vh;
+  flex: 1;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: normal;
+}
+
+#main, 
+#main > div {
+  height: 100% !important;
+}
+
+.left{
+  display : flex;
+  background: url($welcome-img) no-repeat;
+  background-size: cover;
+  height : 100%;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+/***end.css***/
+
+.end {
+  min-height: 20px;
+  margin: 40px 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex: 1;
+}
+
+.intro {
+  .btn-default, .btn-default:focus,  {
+    background: linear-gradient(315deg, $color-tapestry 0%, $color-danube 100%);
+    @include box-shadow(0 10px 20px 0 rgba(125, 110, 183, 0.4));
+    transition: box-shadow 0.5s;
+  }
+}
+
+.intro .btn-default:hover {
+  background: linear-gradient(315deg, $color-tapestry 0%, $color-danube 100%);
+  @include box-shadow(0 20px 20px 0 rgba(125,110,183,0.3));
+  transition: box-shadow 0.5s;
+}
+
+.intro .btn-default:active {
+  background: linear-gradient(315deg, $color-tapestry 0%, $color-danube 100%);
+  @include box-shadow(none);
+  transition: box-shadow 0.5s;
+}
+
+/*start: form*/
+.login form {
+  margin: 0 auto;
+  max-width: 30em;
+  text-align: right;
+  width: 100%;
+}
+
+.inputs input {
+  display: block;
+  height: 3em !important;
+  margin: 0 0 20px;
+  @include box-shadow(none);
+}
+
+.inputs input:focus, 
+input:active  {
+  border: 1px solid $color-silver-chalice;
+  @include box-shadow(none);
+}
+
+.forgot {
+  margin: 20px 0;
+  font-weight: normal;
+  font-size: 0.95em;
+}
+
+.greeting{
+  text-align: center;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2, h3 ,h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.greeting h2 {
+  font-size: 1.125em;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.greeting h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  color: $color-silver-chalice;
+}
+
+.Sign {
+  width:100% ;
+  color:$color-white !important;
+  background: linear-gradient(315deg, $color-tapestry 0%, $color-danube 100%);
+  border: none;
+  @include box-shadow(0 10px 20px 0 rgba(28, 129, 63, 0.4));
+}
+
+.error-img {
+  width: 4em;
+}
+
+.success img {
+  margin: 10px;
+}
+
+.serviceDropdown {
+  width: 100%;
+}
+
+.success{
+  text-align: center;
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.success h2 {
+  color: $color-tundora !important;
+  font-size: 1.125em;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.success h4 {
+  font-size: 0.875em;
+  margin-bottom: 10px;
+  color: $color-silver-chalice;
+  line-height: 24px;
+}
+
+/* Forgot Password */
+.forgotpwd{
+  text-align: center;
+}
+
+.forgotpwd h2 {
+  font-size: 1.125em;
+  margin-top: 6.25em;
+  margin-bottom: 0.75em;
+}
+
+.forgotpwd h3, 
+.reset-pwd h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  color: $color-gray ;
+}
+
+/* Sign Up Form */
+
+ form {
+  margin: 0 auto;
+  max-width: 30em;
+  text-align: left;
+  width: 100%;
+}
+
+.GetAccount, 
+.verify-pwd, 
+.signup-verify{
+  text-align: center;
+}
+
+.GetAccount h2 {
+  font-size: 1.125em;
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: $color-tundora;
+}
+
+.GetAccount h3, 
+.verify-pwd h3, 
+.signup-verify h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  font-weight: light;
+  color: $color-silver-chalice;
+}
+
+.new-pwd .GetAccount {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup input, 
+.reset-mail input, 
+.new-pwd input, 
+.reset-pwd input {
+  display: block;
+  height: 3em !important;
+  @include box-shadow(none);
+}
+
+.Names > div+div {
+  margin-left: 5px;
+}
+
+.signup input:focus, input:active  {
+  border: 1px solid $color-silver-chalice;
+  @include box-shadow(none);
+}
+
+.signup > div {
+  margin-bottom: 0.95em;
+  position: relative;
+  top: initial;
+  bottom: 0;
+}
+
+#role {
+  font-weight: normal;
+  color: $color-silver-chalice;
+  font-size: 0.875em;
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1px solid $color-silver-chalice;
+  @include box-shadow(none);
+}
+
+.has-success .form-control {
+  border-color: $color-tapestry; 
+}
+
+.has-error .form-control {
+  border-color: $color-red;
+}
+
+.has-success .form-control:focus {
+  outline: none;
+  border: 1px solid $color-silver-chalice;
+  @include box-shadow(none);
+}
+
+.has-error .form-control:focus {
+  outline: none;
+  border: 1px solid $color-silver-chalice;
+  @include box-shadow(none);
+}
+
+.intro {
+
+  .end span {
+    font-size: 0.95em;
+    color: $color-gray;
+    align-self: flex-end;
+  }
+
+  a {
+    font-size: inherit;
+    color: $color-silver-chalice; 
+  }
+}
+
+.intro button{
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid $color-gallery;
+  border-radius: 5px;
+  background-color: $color-alabaster;
+  outline: none;
+}
+
+.intro button.active {
+  border: 1px solid $color-tapestry;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.but{
+  box-sizing: border-box;
+  width: 30%;
+}
+
+#Manager{
+  margin-right: 0px;
+}
+
+.Names{
+  display: flex ;
+  justify-content: space-between;
+
+  > div {
+    position: relative;
+  }
+
+  .popover {
+    top: inherit;
+    left: inherit;
+    max-width: inherit;
+  }
+}
+
+.userNames{
+  width:48% ;
+  height: 3em !important;
+  box-sizing: border-box;
+}
+
+/* Reset Password */
+.GetAccount{
+  form > div {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+.reset-mail {
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+/* Password Verify */
+.verify-pwd h1,
+.signup-verify h1, 
+.reset-pwd h1{
+  font-weight: 300;
+}
+
+.verify-pwd h1, 
+.reset-pwd h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.email {
+  background-image: url($email-img) !important;
+  background-repeat:no-repeat;
+  background-position: 20px center;
+  padding-left: 55px;
+}
+
+input,
+input:focus,
+input:active {
+  outline: none;
+  @include box-shadow(none);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+
+  &.email {
+    animation-name: email-autofill;
+    -webkit-animation-name: email-autofill;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+
+  &.password {
+    animation-name: password-autofill;
+    -webkit-animation-name: password-autofill;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+
+}
+
+@keyframes email-autofill {
+  to {
+    color: $color-black;
+    background: url($email-img) 20px center no-repeat transparent;
+  } 
+}
+
+@-webkit-keyframes email-autofill {
+    to {
+        color: $color-black;
+        background: url($email-img) 20px center no-repeat transparent;
+    }
+}
+
+@keyframes password-autofill {
+  to {
+      color: $color-black;
+      background: url($pwd-img) 20px center no-repeat transparent;
+  }
+}
+
+@-webkit-keyframes password-autofill {
+    to {
+        color: $color-black;
+        background: url($pwd-img) 20px center no-repeat transparent;
+    }
+}
+
+.password {
+  background-image: url($pwd-img);
+  background-repeat:no-repeat;
+  background-position: 20px center;
+  padding-left: 55px;
+}
+
+.dd-red-border .Select-control {
+  border: 1px solid $color-red;
+}
+
+.dd-green-border .Select-control {
+  border: 1px solid $color-tapestry;
+}
